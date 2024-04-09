@@ -4,15 +4,17 @@ public class Player {
 	private final String id;
 	private String firstName;
 	private String lastName;
+	private String name;
 	private int credit;
 	private String email;
 	private String password;
 
 	// Constructor
-	public Player(String id, String firstName, String lastName, int credit, String email, String password) {
+	public Player(String id, String name, int credit, String email, String password) {
 		this.id = id;
-		this.firstName = firstName;
-		this.lastName = lastName;
+		this.firstName = name.split(" ")[0];
+		this.lastName = name.split(" ")[1];
+		this.name = name;
 		this.credit = credit;
 		this.email = email;
 		this.password = password;

@@ -37,14 +37,13 @@ public class PlayerXMLImporter {
 
                     // Extract information for each player
                     String id = eElement.getAttribute("id");
-                    String firstName = eElement.getElementsByTagName("FirstName").item(0).getTextContent();
-                    String lastName = eElement.getElementsByTagName("LastName").item(0).getTextContent();
+                    String name = eElement.getElementsByTagName("Name").item(0).getTextContent();
                     int credit = Integer.parseInt(eElement.getElementsByTagName("Credit").item(0).getTextContent());
                     String email = eElement.getElementsByTagName("Email").item(0).getTextContent();
                     String password = eElement.getElementsByTagName("Password").item(0).getTextContent();
 
                     // Add the player to the list
-                    players.add(new Player(id, firstName, lastName, credit, email, password));
+                    players.add(new Player(id, name, credit, email, password));
                 }
             }
         } catch (Exception e) {

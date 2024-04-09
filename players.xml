@@ -1,70 +1,60 @@
 <Players>
     <Player id="P001">
-        <FirstName>John</FirstName>
-        <LastName>Doe</LastName>
+        <Name>John Doe</Name>
         <Credit>1500</Credit>
         <Email>john.doe@example.com</Email>
         <Password>password123</Password>
     </Player>
     <Player id="P002">
-        <FirstName>Jane</FirstName>
-        <LastName>Smith</LastName>
+        <Name>Jane Smith</Name>
         <Credit>2000</Credit>
         <Email>jane.smith@example.com</Email>
         <Password>1234abcd</Password>
     </Player>
     <Player id="P003">
-        <FirstName>Emily</FirstName>
-        <LastName>Jones</LastName>
+        <Name>Emily Jones</Name>
         <Credit>1200</Credit>
         <Email>emily.jones@example.com</Email>
         <Password>emilysecure</Password>
     </Player>
     <Player id="P004">
-        <FirstName>Michael</FirstName>
-        <LastName>Johnson</LastName>
+        <Name>Michael Johnson</Name>
         <Credit>1800</Credit>
         <Email>michael.johnson@example.com</Email>
         <Password>michael789</Password>
     </Player>
     <Player id="P005">
-        <FirstName>Chris</FirstName>
-        <LastName>Brown</LastName>
+        <Name>Chris Brown</Name>
         <Credit>2200</Credit>
         <Email>chris.brown@example.com</Email>
         <Password>chrispass</Password>
     </Player>
     <Player id="P006">
-        <FirstName>Lisa</FirstName>
-        <LastName>Wilson</LastName>
+        <Name>Lisa Wilson</Name>
         <Credit>1450</Credit>
         <Email>lisa.wilson@example.com</Email>
         <Password>lisawilson123</Password>
     </Player>
     <Player id="P007">
-        <FirstName>David</FirstName>
-        <LastName>Miller</LastName>
+        <Name>David Miller</Name>
         <Credit>1750</Credit>
         <Email>david.miller@example.com</Email>
         <Password>davidmiller456</Password>
     </Player>
     <Player id="P008">
-        <FirstName>Amy</FirstName>
-        <LastName>Moore</LastName>
+        <Name>Amy Moore</Name>
         <Credit>1900</Credit>
         <Email>amy.moore@example.com</Email>
         <Password>amymoore789</Password>
     </Player>
     <Player id="P009">
-        <FirstName>James</FirstName>
-        <LastName>Taylor</LastName>
+        <Name>James Taylor</Name>
         <Credit>1600</Credit>
         <Email>james.taylor@example.com</Email>
         <Password>jamestaylor123</Password>
     </Player>
     <Player id="P010">
-        <FirstName>Maria</FirstName>
-        <LastName>Anderson</LastName>
+        <Name>Maria Anderson</Name>
         <Credit>2100</Credit>
         <Email>maria.anderson@example.com</Email>
         <Password>mariaanderson456</Password>

@@ -10,6 +10,9 @@ public class OnlineCasinoUseCase {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		Player player = PlayerXMLImporter.importPlayers("players.xml").get(0);
+
+
+
 		WheelOfFortune wheeloffortune = new WheelOfFortune();
 
 		while (player.getCredit() >= 100) {
