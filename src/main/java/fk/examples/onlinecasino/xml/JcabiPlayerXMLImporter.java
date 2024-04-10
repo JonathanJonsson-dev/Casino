@@ -19,19 +19,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class JcabiPlayerXMLImporter {
+    private static Player xmlToPlayer(XML xmlPlayer) {
+        String id = xmlPlayer.xpath("@id").get(0);
+        String name = xmlPlayer.xpath("Name/text()").get(0);
+        Integer credit = Integer.valueOf(xmlPlayer.xpath("Credit/text()").get(0));
+        String email = xmlPlayer.xpath("Email/text()").get(0);
+        String password = xmlPlayer.xpath("Password/text()").get(0);
+        return new Player(id, name, credit, email, password);
+    }
     public static List<Player> importPlayers(String filePath) {
         List<Player> players = new ArrayList<>();
         try {
             XML xml = new XMLDocument(Paths.get(filePath));
             List<XML> playersFromXML = xml.nodes("//Player");
-            playersFromXML.stream().forEach(xmlPlayer -> {
-                String id = xmlPlayer.xpath("@id").get(0);
-                String name = xmlPlayer.xpath("Name/text()").get(0);
-                Integer credit = Integer.valueOf(xmlPlayer.xpath("Credit/text()").get(0));
-                String email = xmlPlayer.xpath("Email/text()").get(0);
-                String password = xmlPlayer.xpath("Password/text()").get(0);
-                players.add(new Player(id, name, credit, email, password));
-            });
+            playersFromXML.stream().map(JcabiPlayerXMLImporter::xmlToPlayer).forEach(players::add);
         } catch (Exception e) {
             e.printStackTrace();
         }
