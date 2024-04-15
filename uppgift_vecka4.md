@@ -3,7 +3,7 @@
 ## **Del 1: Hantera Spelardata med Avancerad XML-parsing (3 timmar)**
 
 ### **1. Förståelse och Refaktorisering av XML-parsering**
-- **Uppgift:** Ni får tillgång till [denna Casino repository](https://github.com/feldob/Casino) med ett projekt som inkluderar en befintlig XML-parser, `PlayerXMLImporter`, som använder Java DOM-verktyg för att läsa `players.xml`. Klona projektet och importera i din IDE. Testa att parsern faktiskt fungerar genom att anpassa Casino koden, och granska och förstå hur. Vilka frågor ställer du dig när ni går igenom koden? Diskutera i grupp hur lättsamt ni tycker att det är att förstå sig på koden och varför.
+- **Uppgift:** Ni får tillgång till [denna Casino repository](https://github.com/feldob/Casino) med ett projekt som inkluderar en befintlig XML-parser, `PlayerXMLImporter`, som använder Java DOM-verktyg för att läsa `players.xml`. Klona projektet och importera i din IDE. Testa att parsern faktiskt fungerar och granska och förstå hur. Vilka frågor ställer du dig när ni går igenom koden? Diskutera i grupp hur lättsamt ni tycker att det är att förstå sig på koden och varför.
 - **Syfte:** Förstå grundläggande XML-parsing med DOM i Java och identifiera utmaningarna med lågnivå XML-parsing.
 
 ### **2. Implementera en Förbättrad XML-parser med jcabi-xml**

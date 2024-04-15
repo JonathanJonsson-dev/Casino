@@ -74,7 +74,7 @@ public class Player {
 
 	@Override
 	public boolean equals(Object obj) {
-		if (obj instanceof Player) {
+		if (!(obj instanceof Player)) {
 			return false;
 		}
 		Player other = (Player) obj;
