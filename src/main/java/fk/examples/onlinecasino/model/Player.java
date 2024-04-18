@@ -5,12 +5,12 @@ public class Player {
 	private String firstName;
 	private String lastName;
 	private String name;
-	private int credit;
+	private Integer credit;
 	private String email;
 	private String password;
 
 	// Constructor
-	public Player(String id, String name, int credit, String email, String password) {
+	public Player(String id, String name, Integer credit, String email, String password) {
 		this.id = id;
 		this.firstName = name.split(" ")[0];
 		this.lastName = name.split(" ")[1];
@@ -41,7 +41,7 @@ public class Player {
 		this.lastName = lastName;
 	}
 
-	public int getCredit() {
+	public Integer getCredit() {
 		return credit;
 	}
 
