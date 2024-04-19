@@ -3,6 +3,7 @@ package casino;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import fk.examples.onlinecasino.Exceptions.InsufficientFundsException;
@@ -79,4 +80,38 @@ public class PlayerServiceTest {
 		assertEquals(100 + transferAmount, p1.getCredit());
 		assertEquals(1000 - transferAmount, p2.getCredit());
 	}
+
+	@Test
+	public void testByValue(){
+		int[] array = {0, 1, 2};
+		modifyArray(array, 10, 0);
+		assertEquals(10, array[0]);
+		
+	}
+	
+	private void modifyArray(int[] array, int value, int index) {
+		array[index] = value;
+	}
+
+	@Test
+	public void testByValue1(){
+		SomeObject obj = new SomeObject("Original");
+		modifyObject(obj);
+		assertEquals("Modified", obj.name);	
+	}
+
+	private void modifyObject(SomeObject obj) {
+		obj.name = "Modified";
+	}
+
+	@Test
+	public void testByReference(){
+		SomeObject obj = new SomeObject("Original");
+		reassignObject(obj);
+		assertNotEquals("Reassigned", obj.name);
+	}
+
+	private void reassignObject(SomeObject o) {
+        o = new SomeObject("Reassigned");
+    }
 }
