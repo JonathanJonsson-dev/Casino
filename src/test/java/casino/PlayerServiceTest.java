@@ -96,12 +96,14 @@ public class PlayerServiceTest {
 	@Test
 	public void testPassByValue1(){
 		SomeObject obj = new SomeObject("Original");
-		modifyObject(obj);
-		assertEquals("Modified", obj.name);	
+		SomeObject newObject = modifyObject(obj);
+		assertEquals("Modified", obj.name);
+		assertEquals(obj.name, newObject.name);	
 	}
 
-	private void modifyObject(SomeObject obj) {
+	private SomeObject modifyObject(SomeObject obj) {
 		obj.name = "Modified";
+		return obj;
 	}
 
 	@Test
