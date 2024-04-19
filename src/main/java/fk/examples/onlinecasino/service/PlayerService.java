@@ -11,7 +11,7 @@ public class PlayerService {
         if (i < 0) {
             throw new IllegalArgumentException("Transfer amount must be positive");
         }
-        if (p1.getCredit() <= i || p2.getCredit() <= i) {
+        if (p1.getCredit() < i || p2.getCredit() < i) {
             throw new InsufficientFundsException("Insufficient funds");
         }
         else{

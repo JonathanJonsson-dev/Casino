@@ -54,4 +54,29 @@ public class PlayerServiceTest {
 			ps.transfer(p1, p2, p1.getCredit() + 500);
 		});
 	}
+
+	@Test
+	public void testTransferExactBalance(){
+		Integer transferAmount = p1.getCredit();
+		ps.transfer(p1, p2, transferAmount);
+		assertEquals(0, p1.getCredit());
+		assertEquals(1000 + transferAmount, p2.getCredit());
+	}
+
+	@Test
+	public void testTransferZeroAmount() {
+		Integer initialCreditP1 = p1.getCredit();
+		Integer initialCreditP2 = p2.getCredit();
+		ps.transfer(p1, p2, 0);
+		assertEquals(initialCreditP1, p1.getCredit());
+		assertEquals(initialCreditP2, p2.getCredit());
+	}
+
+	@Test
+	public void testReverseTransfer() {
+		Integer transferAmount = 50;
+		ps.transfer(p2, p1, transferAmount);
+		assertEquals(100 + transferAmount, p1.getCredit());
+		assertEquals(1000 - transferAmount, p2.getCredit());
+	}
 }
