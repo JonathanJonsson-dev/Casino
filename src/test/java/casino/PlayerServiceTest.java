@@ -82,7 +82,7 @@ public class PlayerServiceTest {
 	}
 
 	@Test
-	public void testByValue(){
+	public void testPassByValue(){
 		int[] array = {0, 1, 2};
 		modifyArray(array, 10, 0);
 		assertEquals(10, array[0]);
@@ -94,7 +94,7 @@ public class PlayerServiceTest {
 	}
 
 	@Test
-	public void testByValue1(){
+	public void testPassByValue1(){
 		SomeObject obj = new SomeObject("Original");
 		modifyObject(obj);
 		assertEquals("Modified", obj.name);	
@@ -105,7 +105,7 @@ public class PlayerServiceTest {
 	}
 
 	@Test
-	public void testByReference(){
+	public void testPassByReference(){
 		SomeObject obj = new SomeObject("Original");
 		reassignObject(obj);
 		assertNotEquals("Reassigned", obj.name);
